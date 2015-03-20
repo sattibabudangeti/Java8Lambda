@@ -15,11 +15,8 @@ public class ArraysSort {
 		Dog[] dogArray = { d1, d2, d3 };
 		printDogs(dogArray);
 
-		Arrays.sort(dogArray, new Comparator<Dog>() {
-			@Override
-			public int compare(Dog o1, Dog o2) {
-				return o1.height - o2.height;
-			}
+		Arrays.sort(dogArray, (Dog m, Dog n) -> m.getWeight() - n.getWeight());
+printDogs(dogArray);
 		});
 		printDogs(dogArray);
 
